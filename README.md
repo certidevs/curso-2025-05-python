@@ -79,3 +79,16 @@ pip es un gestor de paquetes.
 Repositorio de paquetes: https://pypi.org
 
 Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a GitHub ya que son dependencias y puede pesar bastante.
+
+### ESQUEMA SINTAXIS PYTHON:
+
+* Tipos de datos
+
+
+La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
+
+* Aplicación web: Django, Flask, Streamlit
+* Scripts: backups, operación automatizada
+* Ciberseguridad
+* Ciencia de datos: machine learning y deep learning
+* IA Generativa
