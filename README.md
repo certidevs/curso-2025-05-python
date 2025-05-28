@@ -94,11 +94,24 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * Comparación: ==, >=, <=, >, < (Devuelve Boolean True o False)
     * lógicos: and, or, not (Devuelve Boolean True o False)
     * membresía: in, not in (Devuelve Boolean True o False)
+    * identidad: is, is not
     * bit
 * Estructuras de control condicional
-    * if, elif, else, match
+    * if, elif, else
+    * operador ternario
+    * match
 * Estructuras de control iterativo
+    * for
+    * while
+    * break
+    * continue
 
+Paradigmas:
+
+* Estructurada: if, else, match, for, while, def
+* Programación Orientada a Objetos: clases, objetos, encapsulación, herencia, composición, polimorfismo, patrones de diseño, principios SOLID
+* Programación funcional: código conciso y declarativo: map(), filter(), forEach()
+* Programación reactiva: asincronía y programación funcional, RxJS, Signals, Reactor, async, fastapi
 
 
 La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
