@@ -91,4 +91,14 @@ La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
 * Scripts: backups, operación automatizada
 * Ciberseguridad
 * Ciencia de datos: machine learning y deep learning
+* Análisis de datos, Business Intelligence
 * IA Generativa
+
+## TERMINAL POR DEFECTO:
+
+Ctrl + Shift + P
+
+terminal select default
+
+Esto permite usar cmd como terminal por defecto.
+
