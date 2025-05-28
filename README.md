@@ -39,6 +39,7 @@ Si lo hemos instalado pero no hemos seleccionado el PATH se puede volver a ejecu
 * Jupyter (ms-toolsai.jupyter)
 * GitHub Copilot
 * vscode-icons (opcional, para cambiar iconos )
+* SonarQube for IDE (opcional): extensión para análisis estático de código
 
 ### ARCHIVOS 
 
@@ -82,7 +83,22 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
 
 ### ESQUEMA SINTAXIS PYTHON:
 
-* Tipos de datos
+* Ejecutar vs. Depurar
+* Tipos de datos: str, int, float, bool, complex
+* Palabras clave (keywords) de lenguaje Python: https://docs.python.org/3/reference/lexical_analysis.html#keywords
+* Conversiones de tipos: str(), int(), float()
+* Operaciones con textos str: split(), replace(), len()
+* Operadores:
+    * Aritméticos: *, +, -....
+    * Asignación: =
+    * Comparación: ==, >=, <=, >, < (Devuelve Boolean True o False)
+    * lógicos: and, or, not (Devuelve Boolean True o False)
+    * membresía: in, not in (Devuelve Boolean True o False)
+    * bit
+* Estructuras de control condicional
+    * if, elif, else, match
+* Estructuras de control iterativo
+
 
 
 La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:

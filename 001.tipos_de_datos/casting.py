@@ -4,6 +4,11 @@ x = int(2)
 y = int(2.5)
 z = int ("34")
 
+edad = input('Intoduce tu edad')
+print(type(edad))
+edad_int = int(edad)
+print(edad_int * 3)
+
 print(x)
 print(y)
 print(z)
