@@ -94,13 +94,13 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * Comparación: ==, >=, <=, >, < (Devuelve Boolean True o False)
     * lógicos: and, or, not (Devuelve Boolean True o False)
     * membresía: in, not in (Devuelve Boolean True o False)
-    * identidad: is, is not
+    * identidad: is, is not (Devuelve Boolean True o False)
     * bit
 * Estructuras de control condicional
     * if, elif, else
-    * operador ternario
+    * operador ternario: todo en una misma línea
     * match
-* Estructuras de control iterativo
+* Estructuras de control iterativo (bucles, loops)
     * for: (determinado porque se conocen de antemano cuántas iteraciones puede haber)
         * iterar sobre las letras de un string
         * iterar sobre las palabras de una frase
@@ -109,6 +109,15 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * iterar en base a condiciones booleanas, por ejemplo programa interactivo de consola
     * break
     * continue
+    * Iteradores avanzados: enumerate, zip
+    * Comprehensions: todo en una misma línea
+* Estructuras de datos (nativas de Python, sin necesidad de instalar nada):
+    * Listas: []
+    * Tuplas: ()
+    * Diccionarios: {}
+    * Conjuntos: {}
+    * Otras estructuras: TypedDict, módulo collections, biblioteca numpy, pandas...
+
 
 Paradigmas:
 
