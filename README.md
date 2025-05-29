@@ -101,8 +101,12 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * operador ternario
     * match
 * Estructuras de control iterativo
-    * for
-    * while
+    * for: (determinado porque se conocen de antemano cuántas iteraciones puede haber)
+        * iterar sobre las letras de un string
+        * iterar sobre las palabras de una frase
+        * iterar sobre una estructura de datos: lista
+    * while (indeterminado)
+        * iterar en base a condiciones booleanas, por ejemplo programa interactivo de consola
     * break
     * continue
 
@@ -112,6 +116,10 @@ Paradigmas:
 * Programación Orientada a Objetos: clases, objetos, encapsulación, herencia, composición, polimorfismo, patrones de diseño, principios SOLID
 * Programación funcional: código conciso y declarativo: map(), filter(), forEach()
 * Programación reactiva: asincronía y programación funcional, RxJS, Signals, Reactor, async, fastapi
+
+Técnicas:
+* Catálogo de técnicas de refactorización para crear código limpio y fácil de leer: 
+    * https://refactoring.guru/refactoring/techniques/composing-methods
 
 
 La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
@@ -131,3 +139,9 @@ terminal select default
 
 Esto permite usar cmd como terminal por defecto.
 
+## FRAMEWORKS
+
+* Django
+* Flask
+* FastAPI
+* Streamlit
