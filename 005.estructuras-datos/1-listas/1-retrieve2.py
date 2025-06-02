@@ -13,6 +13,10 @@ print(nominados[1:3])
 
 
 # Error al acceder a índice que no existe
-# print(nominados[4])
+# IndexError: list index out of range
+try:
+    print(nominados[4])
+except IndexError:
+    pass
 
 print("fin")

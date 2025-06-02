@@ -112,11 +112,42 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * Iteradores avanzados: enumerate, zip
     * Comprehensions: todo en una misma línea
 * Estructuras de datos (nativas de Python, sin necesidad de instalar nada):
+    * CRUD:
+        * Create
+        * Retrieve o Read
+        * Update
+        * Delete (crítico)
     * Listas: []
+        * Características: mutables, ordenadas (asc, desc), permiten duplicados
+        * Nomenclatura: se recomienda nombrar las listas en plural: products, users, results
+        * Creación:
+            * ``[]``
+            * ``list(iterable)``
+        * Métodos:
+            * ``len(nombres)``
+            * ``append(x)``: añade un elemento al final
+            * ``insert(x)``: insertar en una posición específica
+            * ``remove(x)``: eliminar primera ocurrencia
+            * ``pop(i)``: eliminar y devolver por índice
+            * ``index(x)``: obtener índice de elemento
+            * ``count(x)``: contar ocurrencias de un elemento
+            * ``sort()``: ordenar inplace (modifica la estructura actual en vez de devolver una nueva)
+            * ``reverse()``: invertir orden
+            * ``extend(iterable)``: añadir una lista a otra lista
+
     * Tuplas: ()
     * Diccionarios: {}
     * Conjuntos: {}
+        * Características: elementos únicos
     * Otras estructuras: TypedDict, módulo collections, biblioteca numpy, pandas...
+* Funciones
+* Entrada y salida
+    * input()
+    * print()
+* Gestión de errores:
+    * try
+    * except
+    * finally
 
 
 Paradigmas:

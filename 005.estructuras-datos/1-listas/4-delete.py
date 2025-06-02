@@ -25,7 +25,7 @@ print(nominados)
 
 # 2. BORRAR UNA LISTA
 
-# 2.1 del
+# 2.1 del borra la lista entera de memoria y deja de existir, útil para liberar memoria
 # del nominados
 # nominados = []
 # print(nominados)  # NameError
