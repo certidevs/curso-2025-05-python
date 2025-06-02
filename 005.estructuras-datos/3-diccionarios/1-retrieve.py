@@ -7,11 +7,16 @@ customer1 = {
     "salary": 99999.99
 }
 
+# esto lo admite pero no es lo habitual
+prueba = {
+    1: "hola",
+    "prueba": "prueba"
+}
 aprobado = True
 
 # Para acceder a los valores utilizamos las claves
 print(customer1)
-print(customer1[0])
+# print(customer1[0])
 print(customer1["customer_id"])
 print(customer1["married"])
 print(type(customer1.get("married")))

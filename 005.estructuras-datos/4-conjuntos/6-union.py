@@ -9,6 +9,10 @@ print(smartphones2)
 print(smartphones3)
 print("==================================")
 
+smartphones3 = smartphones1 | smartphones2  # Devuelve un nuevo conjunto
+print(smartphones1)
+print(smartphones2)
+print(smartphones3)
 
 # update()
 

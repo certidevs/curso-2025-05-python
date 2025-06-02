@@ -9,14 +9,22 @@ Welcome to app, select and option:
 print(menu)
 
 option = int(input("introduce una opción"))
+products = []
 
 if option == 1:
+    print(products)
     pass
 elif option == 2:
+    try:
+        products.append()
+    except ValueError:
+        pass
     pass
 elif option == 3:
+    products[2] = ""
     pass
 elif option == 4:
+    products.remove()
     pass
 else:
     print('no has seleccionado una opción correcta')

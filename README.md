@@ -118,6 +118,10 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * Update
         * Delete (crítico)
     * Listas: []
+        * En java: int[] calificaciones = new int[5];
+        * En java: ArrayList<Integer> calificaciones = new ArrayList<>();
+        * En java: var calificaciones = List.of(1, 2, 3)
+        * En python: calificaciones = [1, 2, 3, 4, 5]
         * Características: mutables, ordenadas (asc, desc), permiten duplicados
         * Nomenclatura: se recomienda nombrar las listas en plural: products, users, results
         * Creación:
@@ -134,13 +138,67 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
             * ``sort()``: ordenar inplace (modifica la estructura actual en vez de devolver una nueva)
             * ``reverse()``: invertir orden
             * ``extend(iterable)``: añadir una lista a otra lista
+        * Cuándo usar: para colecciones que quieres modificar frecuentemente como por ejemplo carrito de la compra, lista de objetos producto.
 
     * Tuplas: ()
+        * Características: inmutables, ordenadas, permiten duplicados
+        * Creación:
+            * ``(,)``: Cuidado, porque si no hay coma igual no crea la tupla: 
+                * (1) --> Esto no es una tupla
+                * (1,) --> Esto sí es una tupla
+            * ``tuple(iterable)``
+        * Métodos
+            * ``count(x)``: contar ocurrencias
+            * ``index(x)``: encontrar índice de un elemento
+            * Desempaquetar: a, b, c = tupla
+        * Cuándo usar: datos de solo lectura, coordenadas (x, y), configuraciones, resultados de una consulta de select de base de datos SQL (una fila de base de datos).
+        * En Pandas: df.shape devuelve una tupla con el número de filas y columnas en el dataframe.
+
     * Diccionarios: {}
+        * Características: mutables, ordenado por inserción, claves únicas
+        * Creación:
+            * ``{ key1 : value1, key2 : value2}``
+            * ``dict(iterable)``
+        * Ejemplo: ``{"id": 1, "title": "Ordenador ASUS 1551"}``
+        * Es una estructura de clave (key) y valor (value)
+        * Métodos:
+            * ``get("key", default)``: obtener valor y si no lo tiene devuelve el valor por defecto.
+            * ``keys()``: obtener todas las claves
+            * ``values()``: obtener los valores
+            * ``items()``: acceder a los pares de clave y valor
+            * ``pop(key)``: borrar por clave y obtener value
+            * ``update(dict)``: actualizar con otro diccionario
+            * ``setdefault(key, default)``: insertar si no existe
+        * Cuándo usar: mapear relaciones clave-valor como por ejemplo contadores, búsqueda por identificador, se usa normalmente para evitar if else largos.
+
     * Conjuntos: {}
-        * Características: elementos únicos
-    * Otras estructuras: TypedDict, módulo collections, biblioteca numpy, pandas...
+        * Características: elementos únicos (no admiten duplicados), no ordenados 
+        * Formas de crearlos: 
+            * ``{value1, value2}``
+            * `set(iterable)`
+        * Métodos:
+            * ``add(x)``: añadir elemento
+            * ``remove(x)``: eliminar elemento (error si no existe)
+            * ``discard(x)``: eliminar elemento (sin error)
+            * ``set1.union(set2)`` o ``|`` : unión
+            * ``set1.intersection(set2)`` o ``&``: insersección
+            * ``set1.difference(set2)`` o ``-``: diferencia. Cuidado porque depende desde qué posición se calcule, ver script de python.
+            * ``set1.issubset(set2)``
+        * Variante:
+            * ``frozenset()``: set inmutable, que podría ser usado como claves de diccionarios.
+
+
+    * Anidar estructuras de datos:
+        * Es común anidar estructuras. Por ejemplo un select a base de datos trae una lista de tuplas.
+        * Tener una lista de diccionarios.
+        * Tener un diccionario dentro de otro diccionario
+    * Otras estructuras: 
+        * TypedDict https://peps.python.org/pep-0589/
+        * módulo collections
+        * biblioteca numpy
+        * pandas...
 * Funciones
+    * 
 * Entrada y salida
     * input()
     * print()
@@ -148,6 +206,13 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * try
     * except
     * finally
+* Programación Orientada a Objetos
+    * Clases
+    * Objetos
+    * Encapsulación
+    * Herencia
+    * Composición
+    * Polimorfismo
 
 
 Paradigmas:
