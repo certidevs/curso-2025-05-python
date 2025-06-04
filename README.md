@@ -198,7 +198,23 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * biblioteca numpy
         * pandas...
 * Funciones
-    * 
+    * Bloques de código reutilizable
+    * Evita duplicar código
+    * Hace que el código sea más legible al poder proporcionar un nombre a un bloque de código
+    * Hace que el código sea más modular, limpio, legible, mantenible, aumenta la usabilidad, evita duplicados.
+    * Se crean con:
+        * ``def nombre_funcion(x1, x2, ...): ... return ...``
+        * ``lambda x: x ** 2 ``
+    * Tipos de parámetros:
+        * Posicionales: def funcion(a, b)
+        * Por defecto: def funcion(a, b=10)
+        * Keyword-only: def funcion(a, *, b, c)
+        * argumentos variables: def funcion(*numeros)
+        * docstring: comentarios para ayudar a entender cómo usar las funciones
+        * Arbitrarios por palabra clave: def funcion(**kwargs)
+
+
+
 * Entrada y salida
     * input()
     * print()
