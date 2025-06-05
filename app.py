@@ -1,3 +1,11 @@
+# Opción 1: importar todo
+# import app_funciones
+
+# Opción 2: importar todo con alias, normalmente para usar un nombre más corto
+# import app_funciones as defs
+
+# Opción 3: importar solo lo necesario
+from app_funciones import mostrar_productos
 
 menu = """
 Aplicación CRUD de productos:
@@ -10,22 +18,6 @@ Aplicación CRUD de productos:
 
 # Lista de strings, la vamos usar como si fuera una base de datos
 products = ["ordenador MSI modern 15", "ordenador HP pavilion"]
-
-def mostrar_productos():
-    # Opción 1: imprimir todos los productos de golpe:
-    # print(products)
-
-    # Opción 2: imprimir los productos pero de uno en uno
-    # for product in products:
-    #     print(product)
-
-    # Opción 3: imprimir con el índice:
-    if len(products) == 0:
-        print('No hay productos')
-        return
-    
-    for i, product in enumerate(products):
-        print(f'Producto {i}: {product}')
 
 def crear_producto():
     try:
@@ -50,7 +42,7 @@ def crear_producto():
         print("error al guardar nuevo producto")
 
 def editar_producto():
-    mostrar_productos()
+    mostrar_productos(products)
 
     id_product = int(input('Introduce el id del producto que quieres modificar'))
 
@@ -71,7 +63,7 @@ def mostrar_menu_y_leer_opcion():
 while True:
     option = mostrar_menu_y_leer_opcion()
     if option == 1:
-        mostrar_productos()
+        mostrar_productos(products)
     elif option == 2:
         crear_producto()
     elif option == 3:
