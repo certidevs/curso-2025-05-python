@@ -222,14 +222,27 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * Son directorios que contienen módulos
     * Se pueden crear paquetes propios
     * Se pueden importar paquetes de la biblioteca estándar de Python
+    * Buscar paquetes creados por la comunidad: https://pypi.org/
+    * pip install nombre-paquete
 
 * Entrada y salida
     * input()
     * print()
+
 * Gestión de errores:
     * try
     * except
     * finally
+    * raise
+    * Ejemplos:
+        * Cuando se leen datos de la entrada input
+        * Cuando se manipulan estructuras de datos u objetos
+        * Casos límite, validaciones
+        * Acceso a filesystem, carpetas, archivos
+        * Comunicaciones por HTTP
+        * Acceso a bases de datos
+         
+
 * Programación Orientada a Objetos
     * Clases
     * Objetos

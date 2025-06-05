@@ -57,8 +57,13 @@ def editar_producto():
 def mostrar_menu_y_leer_opcion():
     print(menu)
     print('\n')
-    option = int(input("Introduce una opción:\n"))
-    return option
+
+    try:
+        return int(input("Introduce una opción:\n"))
+    except ValueError:
+        print("Error, la opción debe ser un número de 1 a 5.")
+
+    return 0
 
 while True:
     option = mostrar_menu_y_leer_opcion()
