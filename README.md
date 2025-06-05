@@ -213,7 +213,15 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * docstring: comentarios para ayudar a entender cómo usar las funciones
         * Arbitrarios por palabra clave: def funcion(**kwargs)
 
+* Módulos:
+    * Son archivos .py que se pueden importar en otros archivos .py
+    * Se pueden crear módulos propios
+    * Se pueden importar módulos de la biblioteca estándar de Python
 
+* Paquetes:
+    * Son directorios que contienen módulos
+    * Se pueden crear paquetes propios
+    * Se pueden importar paquetes de la biblioteca estándar de Python
 
 * Entrada y salida
     * input()
@@ -262,7 +270,36 @@ Esto permite usar cmd como terminal por defecto.
 
 ## FRAMEWORKS
 
-* Django
-* Flask
-* FastAPI
-* Streamlit
+* Backend:
+    * Se ejecuta en el servidor
+    * Opciones:
+        * Python
+            * Django
+                * Django Templates 
+            * Flask 
+                * Jinja 2
+            * FastAPI (Más moderno)
+            * Streamlit
+                * Más orientado a ciencia de datos y proporciona componentes de python y no es necesario programar html css ni js
+        * JavaScript:
+            * Nodejs
+            * Express
+            * Nest
+            * Nextjs
+        * C#
+            * ASP.NET
+        * Java
+            * Spring Boot
+
+* Frontend: 
+    * Se ejecuta en el servidor
+    * JavaScript o TypeScript
+    * React o Angular o Vue
+    * HTML, CSS, Tailwind CSS, Bootstrap CSS, iconos
+
+
+Recomendación para Desarrollo web Backend-Frontend-FullStack:
+
+* Aprender al menos un framework de backend
+* Aprender un poco de frontend: html, css, js, algún framework como React o Angular
+
