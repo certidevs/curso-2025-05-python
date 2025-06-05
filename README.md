@@ -242,6 +242,11 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * Comunicaciones por HTTP
         * Acceso a bases de datos
          
+* Archivos:
+    * with
+    * open
+    * file.read, file.write
+
 
 * Programación Orientada a Objetos
     * Clases
