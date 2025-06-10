@@ -216,7 +216,14 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
 * Módulos:
     * Son archivos .py que se pueden importar en otros archivos .py
     * Se pueden crear módulos propios
-    * Se pueden importar módulos de la biblioteca estándar de Python
+    * Se pueden importar módulos de la biblioteca estándar de Python:
+        * math
+        * datetime
+        * random
+        * json
+        * re
+        * Ver todas: https://docs.python.org/3/library/index.html
+        * Vienen preinstaladas
 
 * Paquetes:
     * Son directorios que contienen módulos
@@ -321,3 +328,45 @@ Recomendación para Desarrollo web Backend-Frontend-FullStack:
 * Aprender al menos un framework de backend
 * Aprender un poco de frontend: html, css, js, algún framework como React o Angular
 
+## FRAMEWORKS PARA PYTHON
+
+Frameworks para desarrollo web:
+
+* FastAPI
+    * Permite crear rápidamente API REST con operaciones CRUD
+    * Modelos Pydantic
+    * ideal para microservicios
+    * Ideal para devolver JSON desde API REST
+    * También se puede usar HTML con Jinja
+    * Moderna
+    * Más liviando
+
+* Django: 
+    * Viene con todo incluído
+    * Más habituales para aplicaciones full stack
+
+Ciencia de datos:
+
+* Streamlit: 
+    * componentes ya hechos
+    * más orientado a ciencia de datos y prototipos rápidos
+
+* numpy
+* scipy
+* pandas
+* matplotlib
+* seaborn
+* plotly
+* scikit learn (machine learning y preparación de datos)
+* tensorflow (redes neuronales)
+* pytorch (redes neuronales)
+* transformers
+
+IA Generativa:
+
+* openai
+* anthropic
+* langchain
+* langgraph
+* crewai
+* ai-sdk (de vercel, javascript)
