@@ -1,0 +1,28 @@
+# 1 - crear clase
+class Car:
+    # 1.1. Atributos de clase
+    num_ruedas = 4
+    encendido = False
+
+    # 1.2 Método constructor
+    def __init__(self, manufacturer="", model="", color="", cc=0.0, cv=0.0, peso=0.0):
+        self.manufacturer = manufacturer
+        self.model = model
+        self.color = color
+        self.cc = cc
+        self.cv = cv
+        self.peso = peso
+
+
+# 2- Crear objetos de la clase Car
+ford_mondeo = Car("Ford", "Mondeo", "black", 1.4, 120, 1459.38)
+tesla_model_s = Car("Tesla", "Model S", "red", 2.1, 180, 1359.38)
+bmw_e30 = Car("BMW", "E 30", "blue", 2.2, 210, 1559.38)
+rolls_royce = Car()
+
+
+#  3 - Modificar sus propiedades
+rolls_royce.manufacturer = "Rolls"
+rolls_royce.model = "Royce"
+
+print("fin")

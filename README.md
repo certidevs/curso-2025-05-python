@@ -263,6 +263,7 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * User, Customer, Product, Category, Technology, Manufacturer, Review, BankAccount
     * Objetos:
         * Instancia concreta de una clase, tendrán valores diferentes en los atributos de la clase.
+    * Constructor: ``__init__``
     * Encapsulación
     * Herencia
     * Composición
