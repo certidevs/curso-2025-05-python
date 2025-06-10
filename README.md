@@ -257,8 +257,12 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
 
 
 * Programación Orientada a Objetos
+    * Paradigma de programación presente en muchos lenguajes de programación
+    * Representar objetos de la realidad en el lenguaje de programación
     * Clases: class
-    * Objetos
+        * User, Customer, Product, Category, Technology, Manufacturer, Review, BankAccount
+    * Objetos:
+        * Instancia concreta de una clase, tendrán valores diferentes en los atributos de la clase.
     * Encapsulación
     * Herencia
     * Composición
