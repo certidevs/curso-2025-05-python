@@ -253,10 +253,11 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * with
     * open
     * file.read, file.write
+    * encoding='utf-8' para garantizar leer bien acentos y carácteres especiales
 
 
 * Programación Orientada a Objetos
-    * Clases
+    * Clases: class
     * Objetos
     * Encapsulación
     * Herencia
@@ -370,3 +371,10 @@ IA Generativa:
 * langgraph
 * crewai
 * ai-sdk (de vercel, javascript)
+
+
+## BASES DE DATOS EN PYTHON
+
+* MySQL
+* MongoDB
+* SQLite
