@@ -287,16 +287,24 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * ``__init__(self, atributo1, atributo2, ...)``
         * `self` se refiere al objeto que estamos creando cuando invocamos la clase: ``User()``
         * Equivalente a `this` en javascript o java.
+        * Normalmente se usa para asignar valores a los atributos del objeto que se está creando.
+        * También permite hacer comprobaciones, procesar algún valor de entrada, operaciones.
+    * Atributos
+        * A nivel de clase:
+            * Normalmente se usan para valores que no cambian y queremos que sean iguales para todos los objetos.
+        * A nivel de instancia (en el constructor):
+            * Normalmente serán los atributos que usemos y que permitirán a cada objeto tener valores distintos.
 
-    * Encapsulación
-    * Herencia
     * Composición
-    * Polimorfismo
+    * Encapsulación
+    * Métodos estáticos a nivel de clase
+    * Herencia
     * Tipado:
         * módulo typing
         * módulo enum
         * librería Pydantic
         * Analizador de tipos mypy
+    * Polimorfismo
 
 
 

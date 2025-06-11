@@ -18,6 +18,12 @@ Aplicación CRUD de productos:
 
 # Lista de strings, la vamos usar como si fuera una base de datos
 # esto se puede reemplazar por una lista de objetos de la clase Producto
+
+class Product:
+    pass
+
+product1 = Product()
+
 products = ["ordenador MSI modern 15", "ordenador HP pavilion"]
 
 def crear_producto():
