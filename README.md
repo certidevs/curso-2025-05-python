@@ -254,20 +254,70 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * open
     * file.read, file.write
     * encoding='utf-8' para garantizar leer bien acentos y carácteres especiales
+    * Windows: 
+        * usa barras invertidas (`\`) backslash
+        * a veces es necesario escapar: `directorio\\subcarpeta\\archivo.txt`
+    * Linux/macOS: usa barras normales (`/`) forward slash
+    * opción 1 rawstrings:
+        * similar al string formateados fstring existe los raw string rstring:
+            * ruta = r'C:\carpeta\subcarpeta\archivo.txt' para evitar problemas de que detecte que `\s` es un caracter de escape
+            * ruta = 'C:\\carpeta\\subcarpeta\\archivo.txt'
+            * ruta = '/carpeta/subcarpeta/archivo.txt'
+    * os
+        * os.path.join('directorio','subcarpeta')
+    * pathlib (más moderna y recomendable)
+        * ruta = Path('directorio') / 'archivo1.txt' # se adapta al SO
+
 
 
 * Programación Orientada a Objetos
     * Paradigma de programación presente en muchos lenguajes de programación
     * Representar objetos de la realidad en el lenguaje de programación
-    * Clases: class
+    * Clases: ``class``
+        * La clases un molde o un plano que define qué atributos y métodos tendrán los objetos.
+        * Sería algo similar a la definición de una tabla de base de datos relacional.
         * User, Customer, Product, Category, Technology, Manufacturer, Review, BankAccount
     * Objetos:
-        * Instancia concreta de una clase, tendrán valores diferentes en los atributos de la clase.
-    * Constructor: ``__init__``
+        * Instancia concreta de una clase, tendrán los atributos y métodos definidos en la clase, de tal manera que todos los objetos de una clase tendrán esa misma estructura. Aunque cada uno podrá tener valores diferentes en sus atributos.
+        * Es una "instancia" de una clase, es algo concreto creado a partir del molde.
+        * ``user = User()``
+    * Constructor: 
+        * Método función especial que se usa para inicializar objetos con valores concretos en sus atributos.
+        * Se ejecuta automáticamente al crear un objeto, no hay que invocarlo explícitamente.
+        * ``__init__(self, atributo1, atributo2, ...)``
+        * `self` se refiere al objeto que estamos creando cuando invocamos la clase: ``User()``
+        * Equivalente a `this` en javascript o java.
+
     * Encapsulación
     * Herencia
     * Composición
     * Polimorfismo
+
+
+
+Ejemplo de clase en JavaScript:
+
+```javascript
+class User {
+    constructor(email, password) {
+        this.email = email;
+        this.password = password;
+    }
+    info() {
+        return `Email: ${this.email}` 
+    }
+}
+```
+
+en python
+
+```python
+class User:
+    def __init__(self, email, password): # dunder methods
+        self.email = email
+        self.password = password
+    #...
+```
 
 
 Paradigmas:
@@ -290,6 +340,14 @@ La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
 * Ciencia de datos: machine learning y deep learning
 * Análisis de datos, Business Intelligence
 * IA Generativa
+
+## INTEGRACIÓN CONTINUA
+
+* GitHub Actions
+* GitLab CI
+* Jenkins
+* Travis CI
+
 
 ## TERMINAL POR DEFECTO:
 
@@ -345,7 +403,7 @@ Frameworks para desarrollo web:
     * Ideal para devolver JSON desde API REST
     * También se puede usar HTML con Jinja
     * Moderna
-    * Más liviando
+    * Más liviano
 
 * Django: 
     * Viene con todo incluído
