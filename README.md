@@ -292,6 +292,11 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
     * Herencia
     * Composición
     * Polimorfismo
+    * Tipado:
+        * módulo typing
+        * módulo enum
+        * librería Pydantic
+        * Analizador de tipos mypy
 
 
 
@@ -348,6 +353,27 @@ La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
 * Jenkins
 * Travis CI
 
+En el caso de Python:
+
+pip install mypy
+
+mypy hello.py
+
+Ejemplo de error de tipos detectado con mypy:
+
+```txt
+C:\dev\curso-2025-05-python\010.oop>mypy product.py
+product.py:10: error: Argument 2 to "Product" has incompatible type "str"; expected "float"  [arg-type]
+product.py:10: error: Argument 4 to "Product" has incompatible type "str"; expected "int"  [arg-type]
+Found 2 errors in 1 file (checked 1 source file)
+```
+
+si todo va bien:
+
+```txt
+C:\dev\curso-2025-05-python\010.oop>mypy product.py
+Success: no issues found in 1 source file
+```
 
 ## TERMINAL POR DEFECTO:
 
