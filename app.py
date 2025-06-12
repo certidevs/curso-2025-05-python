@@ -26,6 +26,13 @@ class Product:
         self.quantity = quantity
         self.published = published
 
+    def __str__(self): # texto legible para humanos, se invoca automáticamente al hacer print o str()
+        return f'Product: name {self.name}, price {self.price} €, quantity {self.quantity}, published {self.published}'
+    
+    def __repr__(self): # representación no ambigua del objeto, útil para debugging y listas
+        return f'Product({self.name!r}, {self.price}, {self.quantity}, {self.published})' 
+    
+
 # crear objetos Product
 products = [
     Product('Producto 1', 19.99, 5, True),
@@ -47,7 +54,6 @@ def mostrar_productos(products):
     
     for i, product in enumerate(products):
         print(f'Producto {i}: {product}')
-
 
 def crear_producto():
 
@@ -78,7 +84,6 @@ def crear_producto():
     new_product = Product(product_name, product_price, product_quantity, product_published)
     products.append(new_product)
     print('Producto creado correctamente')
-
 
 def editar_producto():
     """
@@ -144,6 +149,31 @@ def mostrar_menu_y_leer_opcion():
 
     return 0
 
+def borrar_producto():
+    """
+    Borrar es una acción peligrosa o agresiva, en el sentido de que un producto puede tener 
+    asociaciones mediante Composición con otros objetos de otras clases, como por ejemplo: Compra, Reseña
+    En ese tipo de casos, es común no borrar y simplemente desactivar o despublicar, marcando un boolean 
+    como published de True a False, para que ese producto desde de estar disponible, aunque 
+    siga existiendo en base de datos.
+    """
+    mostrar_productos(products)
+    index = int(input('Introduce la posición del producto que quieres eliminar'))
+    if 0 <= index < len(products):
+        confirm = input(f'¿Está seguro/a de que quiere borrar el producto {products[index].name}? (s/n)').lower().strip()
+        if confirm in ['y', 'yes', 's', 'si']:
+            product_removed = products.pop(index)
+            print(f'Producto {product_removed.name} eliminado correctamente')
+        else:
+            print("Operación cancelada")
+    else:
+        print("el id introducido no es correcto")
+
+    # ???
+    # remove, pop, del
+    # Eliminar el producto de la lista de productos
+
+
 while True:
     option = mostrar_menu_y_leer_opcion()
     if option == 1:
@@ -153,10 +183,7 @@ while True:
     elif option == 3:
         editar_producto()
     elif option == 4:
-        pass
-        # TODO 
-        # borrar_producto() remove, pop, del
-
+        borrar_producto()
     elif option == 5:
         print("Saliendo del programa")
         break
