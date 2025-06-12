@@ -51,6 +51,10 @@ def mostrar_productos(products):
 
 def crear_producto():
 
+    """
+    POST crea un nuevo producto
+    HTTP 201 created
+    """
     product_name = input("Introduce el nombre del nuevo producto")
     if not product_name:
         print("Nombre incorrecto")
@@ -77,15 +81,55 @@ def crear_producto():
 
 
 def editar_producto():
+    """
+    PUT Puede editar de forma global: permite actualizar todos los campos del producto.
+    PATCH Puede editar de forma parcial: permite actualizar solo uno o varios campos, ya que si el usuario deja vacía una pregunta se ignora, se mantendrá el valor que ya había.
+    HTTP 200 ok.
+    """
     mostrar_productos(products)
 
-    id_product = int(input('Introduce el id del producto que quieres modificar'))
+    id_product = int(input('Introduce la posición del producto que quieres modificar'))
 
     # TODO verificar que el id sea correcto:
     # no puede ser menor que 0
     # no puede ser mayor de 20
     if 0 <= id_product < len(products):
-        products[id_product] = input("Introduce el nuevo nombre para el producto") 
+
+        product_to_edit = products[id_product] # SELECT * from products where product.id = :id;
+        print(f"Editando producto: {product_to_edit.name}")
+
+        product_name = input(f'Introduce nuevo nombre. Nombre actual: {product_to_edit.name}').strip()
+        if product_name:
+            product_to_edit.name = product_name
+
+        product_price_str = input(f'Introduce nuevo precio en euros. Precio actual: {product_to_edit.price}').strip()
+        if product_price_str:
+            try:
+                product_price_float = float(product_price_str)
+                if product_price_float > 0:
+                    product_to_edit.price = product_price_float
+                else:
+                    print("Precio debe ser mayor que cero")
+            except ValueError:
+                print('Número incorrecto')
+
+        product_quantity_str = input(f'Introduce nueva cantidad. Cantidad actual: {product_to_edit.quantity}').strip()
+        if product_quantity_str:
+            try:
+                product_quantity_int = int(product_quantity_str)
+                if product_quantity_int > 0:
+                    product_to_edit.quantity = product_quantity_int
+                else:
+                    print("Cantidad debe ser mayor que cero")
+            except ValueError:
+                print('Número incorrecto')
+
+        product_published_input = input(f'Estado actual {product_to_edit.published}. ¿Publicar producto? (y/n):').lower().strip()
+        if product_published_input:
+            product_to_edit.published = product_published_input in ['y', 'yes', 's', 'si', 'sí'] # select * from products where published in ('y', 's', ....) 
+        
+        print('Producto actualizado. OK. ')
+
     else:
         print("id introducido no es correcto")
 
@@ -109,7 +153,10 @@ while True:
     elif option == 3:
         editar_producto()
     elif option == 4:
-        editar_producto()
+        pass
+        # TODO 
+        # borrar_producto() remove, pop, del
+
     elif option == 5:
         print("Saliendo del programa")
         break
