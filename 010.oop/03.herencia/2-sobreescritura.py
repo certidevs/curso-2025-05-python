@@ -1,5 +1,4 @@
 class Vehicle:
-
     num_ruedas = 2
 
     def __init__(self, id, manufacturer, model, price):
@@ -11,11 +10,8 @@ class Vehicle:
     def acelerar(self):
         print("Acelerando de 0 a 120")
 
-
-
 class Car(Vehicle):
     pass
-
 
 class MotorCycle(Vehicle):
     pass

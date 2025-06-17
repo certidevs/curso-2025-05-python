@@ -306,10 +306,29 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * A nivel de instancia (en el constructor):
             * Normalmente serán los atributos que usemos y que permitirán a cada objeto tener valores distintos.
 
-    * Composición y Asociaciones
+    * Composición y Asociaciones:
+        * Es una relación "tiene-un" (has-a) donde una clase contiene instancias de otras clases como atributos.
+
+    * Herencia
+        * Es una relación "es-un" (is-a) donde una clase hija (o clase derivada) hereda atributos y métodos de una clase base (o clase padre o clase madre o superclase).
+        * Permite crear jerarquías de clases y reutilizar código ya que al heredarlo no hay que duplicarlo y podemos extenderlo y especializarlo.
+        * Se implementa utilizando paréntesis en la clase:
+            * class Car(Vehicle)
+        * Se permite la herencia múltiple: (tiene prioridad la primera)
+            * class Child(Mother, Father)
+        * Cuándo se usa:
+            * normalmente se usa cuando se quiere heredar funcionalidades que están programadas en frameworks bibliotecas librerías, por ejemplo cuando usamos librerías como SQLAlchemy o Pydantic:
+                * https://docs.sqlalchemy.org/en/20/orm/quickstart.html#emit-create-table-ddl
+                * https://docs.pydantic.dev/latest/#pydantic-examples
+                * https://scikit-learn.org/stable/modules/generated/sklearn.base.ClassifierMixin.html#sklearn.base.ClassifierMixin
+        * Conceptos asociados a la herencia:
+            * sobrescritura (overwrite): sobreescribir el código de un método heredado, reemplaza el código heredado por un código más específico
+            * el método super():
+
+
+
     * Encapsulación
     * Métodos estáticos a nivel de clase
-    * Herencia
     * Tipado:
         * módulo typing
         * módulo enum
@@ -325,7 +344,8 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * Crear clases de Python utilizando herencia con SQLAlchemy ORM, y al ejecutar Python se generan las tablas de SQL automáticamente. 
         * Una vez generadas las tablas, si queremos evolucionar nuestro esquema para agregar nuevas columnas utilizamos un sistema de control de versiones y migraciones como por ejemplo "alembic" https://alembic.sqlalchemy.org/en/latest/autogenerate.html
 
-
+* API REST:
+    * Creación de aplicación con estilo arquitectural REST, sin HTML, retorna JSON.
 
 Ejemplo de clase en JavaScript:
 
