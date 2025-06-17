@@ -224,6 +224,17 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * re
         * Ver todas: https://docs.python.org/3/library/index.html
         * Vienen preinstaladas
+    * Sintaxis para importar módulos:
+        * from
+        * import
+        * as
+        * Opción 1: Si el módulo python por ejemplo functions.py está en el directorio entonces se puede importar de forma directa: import functions
+        * Opción 2: Si el módulo python por ejemplo functions.py está en otro directorio diferente entonces puede requerir usar path para ubicar:
+            * import sys
+            * sys.path.append("/ruta/completa/directorio')
+            * import functions
+        * Opción 3: En ese caso es más recomendable construir un paquete e instalarlo
+
 
 * Paquetes:
     * Son directorios que contienen módulos
@@ -295,7 +306,7 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * A nivel de instancia (en el constructor):
             * Normalmente serán los atributos que usemos y que permitirán a cada objeto tener valores distintos.
 
-    * Composición
+    * Composición y Asociaciones
     * Encapsulación
     * Métodos estáticos a nivel de clase
     * Herencia
@@ -305,6 +316,14 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * librería Pydantic
         * Analizador de tipos mypy
     * Polimorfismo
+
+
+* Base de datos:
+    * Opción 1: 
+        * Crear base de datos y tablas con SQL directamente en la base de datos, luego con un ORM (sqlalchemy) conectarse a la base de datos y autogenerar el código de las clases Python para cada una de las tablas de base de datos.
+    * Opción 2: 
+        * Crear clases de Python utilizando herencia con SQLAlchemy ORM, y al ejecutar Python se generan las tablas de SQL automáticamente. 
+        * Una vez generadas las tablas, si queremos evolucionar nuestro esquema para agregar nuevas columnas utilizamos un sistema de control de versiones y migraciones como por ejemplo "alembic" https://alembic.sqlalchemy.org/en/latest/autogenerate.html
 
 
 
