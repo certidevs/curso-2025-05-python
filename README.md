@@ -364,6 +364,8 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
             * docker-compose up -d
     * Conexión desde Python
         * Instalar mysql connector: pip install mysql-connector-python
+    * Para contraseñas seguras:
+        * Lo ideal sería almacenar la contraseña en una variable de entorno en un archivo .env y cargarlo con una librería dotenv haciendo pip install python-dotenv
 
 
 
