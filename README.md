@@ -355,6 +355,19 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * Crear clases de Python utilizando herencia con SQLAlchemy ORM, y al ejecutar Python se generan las tablas de SQL automáticamente. 
         * Una vez generadas las tablas, si queremos evolucionar nuestro esquema para agregar nuevas columnas utilizamos un sistema de control de versiones y migraciones como por ejemplo "alembic" https://alembic.sqlalchemy.org/en/latest/autogenerate.html
 
+* MySQL
+    * Instalación:
+        * Opción 1: instalación directa:
+            * MySQL Installer: esto te instala el MySQL Community Server y MySQL Workbench
+            * https://dev.mysql.com/downloads/installer/
+        * Opción 2: con docker
+            * docker-compose up -d
+    * Conexión desde Python
+        * Instalar mysql connector: pip install mysql-connector-python
+
+
+
+
 * API REST:
     * Creación de aplicación con estilo arquitectural REST, sin HTML, retorna JSON.
 
