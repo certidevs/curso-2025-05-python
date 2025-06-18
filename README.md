@@ -326,8 +326,19 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
             * el método super():
 
 
-
     * Encapsulación
+        * mecanismo de oop que restringue el acceso directo a atributos y métodos internos de una clase. 
+        * La idea es proteger los datos y dar un acceso controlado mediante métodos getters y setters.
+        * No hay modificadores de visibilidad como en javascript, java o C++: 
+            * public --> el equivalente en python: variable
+            * protected --> el equivalente en python: _variable
+            * private --> el equivalente en python: __variable
+        * Ejemplo:
+            * scikit learn cuando entrenamos un modelo, el modelo aprende de unos datos calculando unos pesos, esos pesos quedan almacenados en variables protegidas, para que nosotros como developers no nos pongamos a modificar esos pesos a mano. Ejemplo: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+        * Si pone __atributo con dos barra baja quiere decir que es "privado", python lo esconde y no lo deja modificar desde fuera de la clase, esto se conoce también como name mangling.
+        * Más light: si pone _atributo con una barra baja quiere que es "protegido" puedes acceder pero no se debería, sería recomdable no hacerlo pero no lo impide. Esto es lo que hace por ejemplo scikit learn.
+
+
     * Métodos estáticos a nivel de clase
     * Tipado:
         * módulo typing
