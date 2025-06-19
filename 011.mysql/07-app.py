@@ -17,7 +17,7 @@ ecommerce_mysql_conn = {
 
 class Product:
     def __init__(self, id, name, sku, quantity, price):
-        self.id = id
+        self.id = id # clave primaria
         self.name = name
         self.sku = sku
         self.quantity = quantity
@@ -220,7 +220,7 @@ def find_all_products():
     try:
         db = mysql.connector.connect(**ecommerce_mysql_conn)
         cursor = db.cursor()
-        sql = 'SELECT * FROM products'
+        sql = 'SELECT * FROM products' #cuidado, sería ideal hacer paginación LIMIT OFFSET
         cursor.execute(sql)
         rows = cursor.fetchall()
         products = []
@@ -262,6 +262,7 @@ def delete_product(id):
 
 # ********************* CÓDIGO PARA EL PROGRAMA ***************************************************************
 
+# Cuidado: esta línea regenera la base de datos:
 create_ecommerce_db()
 
 action = ''
