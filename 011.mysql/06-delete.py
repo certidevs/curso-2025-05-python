@@ -11,12 +11,11 @@ database = con.connect(
 cursor = database.cursor()
 
 sql = """
-UPDATE product
-SET name = %s, price = %s, quantity = %s
-WHERE id = %s;
+ DELETE FROM product 
+ WHERE id = %s; 
 """
-params = ("mesa de roble añejo", 811.9, 2, 1)
-cursor.execute(sql, params)
+params = (1,) # tupla
+cursor.execute(sql, params) # una vez borrado, la secuencia de ids, continúa, no se resetea
 
 database.commit()  # hace efectivos los cambios en base de datos
 
