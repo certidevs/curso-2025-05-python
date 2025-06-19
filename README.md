@@ -372,6 +372,13 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
 
 * API REST:
     * Creación de aplicación con estilo arquitectural REST, sin HTML, retorna JSON.
+    * pip install "fastapi[standard]"
+    * Crear archivo main.py
+        * Crear objeto FastAPI()
+        * Crear métodos de controlador que recibirán peticiones HTTP desde navegador o Open API Swagger
+        * fastapi dev main.py
+
+
 
 Ejemplo de clase en JavaScript:
 
@@ -418,6 +425,13 @@ La sintaxis es la base para luego desarrollar cualquier tipo de aplicación:
 * Ciencia de datos: machine learning y deep learning
 * Análisis de datos, Business Intelligence
 * IA Generativa
+
+
+## Gestor de paquetes y entorno
+
+Nueva herramienta uv escrita en Rust para gestionar entornos python:
+
+https://github.com/astral-sh/uv
 
 ## INTEGRACIÓN CONTINUA
 
@@ -540,3 +554,34 @@ IA Generativa:
 * MySQL
 * MongoDB
 * SQLite
+
+
+## CONTINUACIÓN
+
+Sabiendo las bases de Python:
+
+* backend: fastapi, flask, django
+* frontend: 
+    * motor de plantillas jinja se puede agregar en fastapi o flask,
+    * django templates ya viene en django
+    * frameworks de javascript: react, angular, vue
+* ciencia de datos e IA
+    * Análisis y procesamiento de datos: numpy, pandas, polars
+    * Visualización de datos: matplotlib, seaborn, plotly
+    * Machine Learning: scikit learn, pyspark MLlib
+    * Deep Learning: TensorFlow, PyTorch
+        * IA generativa:
+            * transformers
+            * openai
+            * anthropic
+            * langchain
+* Big Data:
+    * pyspark
+* ciberseguridad
+    * linux
+    * docker
+    * reconocimiento y escaneo: nmap
+    * análisis red: wireshark, tcpdump, scapy
+    * vulnerabilidades: owasp zap, burpsuite, sqlmap, openvas-greenbone, nessus
+    * web scraping: requests, beautiful soup, selenium
+    * explotación: metasploit
