@@ -368,7 +368,7 @@ Habitual agregar .venv al archivo .gitignore para evitar subir esa carpeta a Git
         * Lo ideal sería almacenar la contraseña en una variable de entorno en un archivo .env y cargarlo con una librería dotenv haciendo pip install python-dotenv
 
 
-
+* Aplicación products con MYSQL
 
 * API REST:
     * Creación de aplicación con estilo arquitectural REST, sin HTML, retorna JSON.
